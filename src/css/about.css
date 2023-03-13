@@ -1,0 +1,33 @@
+:root {
+  --color-dark-i: #545454;
+  --color-dark-xl: #4c4c4c;
+}
+
+.about {
+}
+.about-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 175px 100px;
+}
+.about-image {
+}
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 430px;
+  gap: 25px;
+}
+.about-text-title {
+  max-width: 370px;
+  color: var(--color-dark-i);
+}
+.paragraph {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: var(--color-dark-xl);
+}
