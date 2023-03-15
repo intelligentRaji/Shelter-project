@@ -10,7 +10,16 @@ module.exports = {
     sourceType: "module",
   },
   ignorePatterns: ["webpack.config.cjs"],
+  plugins: ["import"],
   rules: {
     "no-console": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        js: "always",
+        json: "always",
+      },
+    ],
   },
 };

@@ -1,1 +1,3 @@
-(()=>{"use strict";var _={}})();
+(()=>{"use strict";var i={};class n{constructor({tag:e,className:c,parent:s}){this.element=document.createElement(e),this.element.className=c,s&&s.append(this.element)}}class o extends n{constructor(e){super({tag:"section",...e}),this.neighbor=document.querySelector(e.neighbor),this.neighbor.after(this.element)}}class r extends o{}r({className:"our-friends",neighbor:".about"})})();
+
+//# sourceMappingURL=main.js.map
