@@ -1,0 +1,137 @@
+:root {
+  --color-light-l: #f6f6f6;
+  --color-light-s: #fafafa;
+  --color-dark-l: #545454;
+  --color-dark-3xl: #292929;
+  --color-primary: #f1cdb3;
+  --color-primary-light: #fddcc4;
+  --color-light-xl: #ffffff;
+}
+
+.our-friends {
+  background-color: var(--color-light-l);
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.our-friends-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.our-friends-title {
+  max-width: 400px;
+  text-align: center;
+}
+
+.our-friends-slider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.our-friends-slider-button {
+  background-color: transparent;
+  width: 52px;
+  height: 52px;
+  border: 2px solid #f1cdb3;
+  border-radius: 50%;
+  position: relative;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.our-friends-slider-button:hover {
+  background-color: #f1cdb3;
+}
+
+.our-friends-slider-button.right {
+  transform: rotate(180deg);
+}
+
+.our-friends-slider-button-img {
+  display: block;
+  margin: auto;
+}
+
+.our-friends-viewport {
+  display: flex;
+  max-width: 990px;
+  overflow: hidden;
+}
+
+.our-friends-slide {
+  display: flex;
+  flex: 1 0 100%;
+  justify-content: space-between;
+}
+
+.our-friends-card {
+  background-color: var(--color-light-s);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  border-radius: 9px;
+  transition: all 0.3s ease 0s;
+}
+
+.our-friends-card:hover {
+  background-color: var(--color-light-xl);
+}
+
+.our-friends-card-text {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: var(--color-dark-l);
+  letter-spacing: 0.06em;
+}
+
+.our-friends-card-button {
+  padding: 12px 42px;
+  background-color: transparent;
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+  position: relative;
+  transition: all 0.3s ease 0s;
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: var(--color-dark-3xl);
+  margin-bottom: 30px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.our-friends-card:hover .our-friends-card-button {
+  background-color: var(--color-primary);
+}
+
+.our-friends-button {
+  padding: 15px 45px;
+  background-color: var(--color-primary);
+  border-radius: 100px;
+  border: none;
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  color: var(--color-dark-3xl);
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.our-friends-button:hover {
+  background-color: var(--color-primary-light);
+}

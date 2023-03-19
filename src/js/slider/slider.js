@@ -1,17 +1,20 @@
 import SectionComponent from "./SectionComponent.js";
 import BaseComponent from "./BaseComponent.js";
 import TextComponent from "./TextComponent.js";
-import OurFriendsSlider from "./OurFirendsSlider.js";
+import arrow from "../../assets/svg/Arrow.svg";
+import ButtonComponent from "./ButtonComponent.js";
+import MainSlider from "./MainSlider.js";
 
 export default class Slider extends SectionComponent {
   constructor(options) {
     super(options);
+    this.files = options.files;
     this.container = new BaseComponent({
       tag: "div",
       className: "container",
       parent: this.element,
     });
-    this.wrapper = new BaseComponent({
+    this.ourFriendsWrapper = new BaseComponent({
       tag: "div",
       className: "our-friends-wrapper",
       parent: this.container.element,
@@ -19,13 +22,42 @@ export default class Slider extends SectionComponent {
     this.title = new TextComponent({
       tag: "h2",
       className: "our-friends-title h2",
-      parent: this.wrapper.element,
-      text: "Our friends who are looking for a house",
+      parent: this.ourFriendsWrapper.element,
+      text: "Our friends who <br> are looking for a house",
     });
-    this.sliderWrapper = new OurFriendsSlider({
+    this.sliderWrapper = new BaseComponent({
       tag: "div",
-      className: "our-friends-slider-wrapper",
-      parent: this.wrapper.element,
+      className: "our-friends-slider",
+      parent: this.ourFriendsWrapper.element,
+    });
+    this.left = new ButtonComponent({
+      className: "our-friends-slider-button left",
+      parent: this.sliderWrapper.element,
+      src: arrow,
+      alt: "left",
+    });
+    this.viewport = new MainSlider({
+      tag: "div",
+      className: "our-friends-viewport",
+      parent: this.sliderWrapper.element,
+      files: this.files,
+    });
+    this.right = new ButtonComponent({
+      className: "our-friends-slider-button right",
+      parent: this.sliderWrapper.element,
+      src: arrow,
+      alt: "right",
+    });
+    this.button = new BaseComponent({
+      tag: "div",
+      className: "our-friends-button",
+      parent: this.ourFriendsWrapper.element,
+    });
+    this.buttonText = new TextComponent({
+      tag: "p",
+      className: "our-friends-button-text",
+      parent: this.button.element,
+      text: "Get to know the rest",
     });
   }
 }

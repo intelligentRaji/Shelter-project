@@ -2,15 +2,15 @@ import BaseComponent from "./BaseComponent.js";
 import ImageComponent from "./ImageComponent.js";
 
 export default class ButtonComponent extends BaseComponent {
-  constructor({ className, modificator, parent, text, src }) {
+  constructor({ className, parent, text, src, alt }) {
     super({ tag: "button", className, parent });
-    if (modificator) this.element.classList.add(modificator);
     if (text) this.element.textContent = text;
     if (src) {
       this.image = new ImageComponent({
-        className: `${className}-img`,
+        className: `${BaseComponent.getFirstClassName(className)}-img`,
         parent: this.element,
         src,
+        alt,
       });
     }
   }

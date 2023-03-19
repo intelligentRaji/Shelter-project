@@ -3,6 +3,8 @@
 @import url("./not-only.css");
 @import url("./about.css");
 @import url("./slider.css");
+@import url("./help.css");
+@import url("./addition.css");
 
 ul {
   list-style-type: none;
