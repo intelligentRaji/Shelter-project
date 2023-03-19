@@ -7,11 +7,8 @@
 }
 
 .not-only {
-  background: radial-gradient(
-    farthest-corner at -100% -100%,
-    rgba(91, 72, 58, 1) 0%,
-    #262425 100%
-  );
+  background: url("../assets/img/start-screen-gradient-background.png");
+  background-size: cover;
 }
 .not-only-wrapper {
   display: flex;
