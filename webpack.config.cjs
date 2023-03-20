@@ -14,9 +14,10 @@ const stylesHandler = isProduction
   : "style-loader";
 
 const config = {
-  entry: "./src/js/index.js",
+  entry: { index: "./src/js/index.js", pets: "./src/js/pets.js" },
   devtool: "source-map",
   output: {
+    filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
   },
   devServer: {
@@ -26,7 +27,15 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      filename: "index.html",
       template: "index.html",
+      chunks: ["index"],
+      favicon: "./src/assets/favicon/favicon-32x32.png",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "pets.html",
+      template: "pets.html",
+      chunks: ["pets"],
       favicon: "./src/assets/favicon/favicon-32x32.png",
     }),
     new ImageminWebpWebpackPlugin({

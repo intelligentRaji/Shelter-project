@@ -1,8 +1,8 @@
-import SectionComponent from "./SectionComponent.js";
-import BaseComponent from "./BaseComponent.js";
-import TextComponent from "./TextComponent.js";
+import SectionComponent from "../components/SectionComponent.js";
+import BaseComponent from "../components/BaseComponent.js";
+import TextComponent from "../components/TextComponent.js";
 import arrow from "../../assets/svg/Arrow.svg";
-import ButtonComponent from "./ButtonComponent.js";
+import ButtonComponent from "../components/ButtonComponent.js";
 import MainSlider from "./MainSlider.js";
 
 export default class Slider extends SectionComponent {

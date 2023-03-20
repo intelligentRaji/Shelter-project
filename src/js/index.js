@@ -1,4 +1,4 @@
-import "../css/style.css";
+import "../css/main/style.css";
 import Slider from "./slider/slider.js";
 
 async function startApp() {

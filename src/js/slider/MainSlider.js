@@ -1,5 +1,5 @@
-import SlideComponent from "./SlideComponent.js";
-import ViewportComponent from "./ViewportComponent.js";
+import SlideComponent from "../components/SlideComponent.js";
+import ViewportComponent from "../components/ViewportComponent.js";
 
 export default class MainSlider extends ViewportComponent {
   constructor(options) {

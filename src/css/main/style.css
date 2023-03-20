@@ -1,0 +1,34 @@
+@import url("../normalize.css");
+@import url("./header.css");
+@import url("./not-only.css");
+@import url("./about.css");
+@import url("./slider.css");
+@import url("./help.css");
+@import url("./addition.css");
+@import url("./footer.css");
+
+ul {
+  list-style-type: none;
+}
+
+p,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1280px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+.h2 {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
