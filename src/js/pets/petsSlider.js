@@ -1,4 +1,4 @@
-import SlideComponent from "../components/SlideComponent.js";
+import PetsSlide from "./petsSlide.js";
 import ViewportComponent from "../components/ViewportComponent.js";
 import shuffleArray from "../utils/shuffle.js";
 
@@ -7,7 +7,6 @@ export default class PetsSlider extends ViewportComponent {
     super(options);
     this.getFiles(options.files);
     this.getSlides();
-    console.log(this.slides);
   }
 
   getFiles(files) {
@@ -23,9 +22,9 @@ export default class PetsSlider extends ViewportComponent {
     const cardsPerSlide = 8;
     const res = [];
     for (let i = 0; i < this.files.length; i += cardsPerSlide) {
-      const cardsInSlide = this.files.slice(i, cardsPerSlide);
+      const cardsInSlide = this.files.slice(i, i + cardsPerSlide);
       res.push(
-        new SlideComponent({
+        new PetsSlide({
           tag: "div",
           className: "our-friends-slide",
           parent: this.element,
@@ -33,5 +32,6 @@ export default class PetsSlider extends ViewportComponent {
         })
       );
     }
+    this.slides = res;
   }
 }

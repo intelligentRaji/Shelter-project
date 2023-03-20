@@ -1,5 +1,5 @@
-import SlideComponent from "../components/SlideComponent.js";
 import ViewportComponent from "../components/ViewportComponent.js";
+import MainSlide from "./mianSlide.js";
 
 export default class MainSlider extends ViewportComponent {
   constructor(options) {
@@ -12,7 +12,7 @@ export default class MainSlider extends ViewportComponent {
     this.slides = [];
     for (let i = 0; i < 3; i += 1) {
       this.slides.push(
-        new SlideComponent({
+        new MainSlide({
           tag: "div",
           className: "our-friends-slide",
           parent: this.element,

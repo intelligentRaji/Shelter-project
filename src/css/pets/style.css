@@ -1,5 +1,7 @@
 @import url("../normalize.css");
 @import url("./pets-header.css");
+@import url("./our-friends.css");
+@import url("../main/footer.css");
 
 ul {
   list-style-type: none;

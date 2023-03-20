@@ -7,7 +7,7 @@ async function startApp() {
   // eslint-disable-next-line no-new
   new Pagination({
     className: "our-friends",
-    neighbor: ".header",
+    parent: document.querySelector(".main"),
     files: data,
   });
 }
