@@ -4,6 +4,7 @@ import TextComponent from "../components/TextComponent.js";
 import arrow from "../../assets/svg/Arrow.svg";
 import ButtonComponent from "../components/ButtonComponent.js";
 import MainSlider from "./MainSlider.js";
+import LinkComponent from "../components/LinkComponent.js";
 
 export default class Slider extends SectionComponent {
   constructor(options) {
@@ -48,10 +49,10 @@ export default class Slider extends SectionComponent {
       src: arrow,
       alt: "right",
     });
-    this.button = new BaseComponent({
-      tag: "a",
+    this.button = new LinkComponent({
       className: "our-friends-button",
       parent: this.ourFriendsWrapper.element,
+      src: "pets.html",
     });
     this.buttonText = new TextComponent({
       tag: "p",
