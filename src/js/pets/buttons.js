@@ -1,5 +1,6 @@
 import BaseComponent from "../components/BaseComponent.js";
 import ButtonComponent from "../components/ButtonComponent.js";
+import TextComponent from "../components/TextComponent.js";
 
 export default class Buttons extends BaseComponent {
   constructor(options) {
@@ -14,8 +15,9 @@ export default class Buttons extends BaseComponent {
       parent: this.element,
       svg: "pets-right",
     });
-    this.page = new ButtonComponent({
-      className: "our-friends-button",
+    this.page = new TextComponent({
+      tag: "p",
+      className: "our-friends-page",
       parent: this.element,
       text: "1",
     });

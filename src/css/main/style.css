@@ -7,8 +7,16 @@
 @import url("./addition.css");
 @import url("./footer.css");
 
+html {
+  scroll-behavior: smooth;
+}
+
 ul {
   list-style-type: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 p,

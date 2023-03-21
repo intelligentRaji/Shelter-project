@@ -13,7 +13,7 @@
 .our-friends {
   background-color: var(--color-light-l);
   padding-top: 80px;
-  padding-bottom: 103px;
+  padding-bottom: 99px;
 }
 
 .our-friends-container {
@@ -69,12 +69,13 @@
 .our-friends-button svg {
   width: 13px;
   height: 23px;
-  transform: translate(-50%, -50%);
+  transform: translate(-40%, -50%);
 }
 
 .our-friends-button.double svg {
   width: 27px;
   height: 23px;
+  transform: translate(-50%, -50%);
 }
 
 .our-friends-button-svg {
@@ -96,6 +97,19 @@
 .our-friends-slider-button-img {
   display: block;
   margin: auto;
+}
+
+.our-friends-page {
+  background-color: var(--color-primary);
+  width: 52px;
+  height: 52px;
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+  position: relative;
+  text-align: center;
+  line-height: 52px;
+  vertical-align: middle;
+  user-select: none;
 }
 
 .our-friends-viewport {

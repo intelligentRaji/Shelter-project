@@ -53,6 +53,12 @@
   font-size: 15px;
   line-height: 160%;
 }
+.header-item:first-child {
+  border-bottom: 3px solid var(--color-primary);
+}
+.header-item:first-child > .header-link {
+  color: var(--color-light-s);
+}
 .header-link {
   text-decoration: none;
   color: var(--color-dark-s);

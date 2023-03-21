@@ -43,6 +43,9 @@
   letter-spacing: 0.06em;
   color: var(--color-primary);
 }
+.footer-text:hover {
+  text-decoration: underline;
+}
 .footer-visit {
   max-width: 302px;
 }

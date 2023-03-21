@@ -3,8 +3,16 @@
 @import url("./our-friends.css");
 @import url("../main/footer.css");
 
+html {
+  scroll-behavior: smooth;
+}
+
 ul {
   list-style-type: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 p,

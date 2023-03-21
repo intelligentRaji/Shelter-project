@@ -49,11 +49,13 @@
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
-  line-height: 130%;
+  line-height: 50px;
   letter-spacing: 0.06em;
   color: var(--color-dark-3xl);
   cursor: pointer;
   transition: all 0.2s ease 0s;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .not-only-button:hover {

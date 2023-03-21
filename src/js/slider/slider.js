@@ -49,7 +49,7 @@ export default class Slider extends SectionComponent {
       alt: "right",
     });
     this.button = new BaseComponent({
-      tag: "div",
+      tag: "a",
       className: "our-friends-button",
       parent: this.ourFriendsWrapper.element,
     });

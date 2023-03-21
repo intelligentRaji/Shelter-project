@@ -53,6 +53,9 @@
   font-size: 15px;
   line-height: 160%;
 }
+.header-item:nth-child(2) {
+  border-bottom: 3px solid var(--color-primary);
+}
 .header-link {
   text-decoration: none;
   color: var(--color-dark-l);
