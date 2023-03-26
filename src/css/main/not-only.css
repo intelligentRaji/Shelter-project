@@ -74,6 +74,9 @@
 @media (max-width: 1030px) {
   .not-only {
     padding-top: 150px;
+    background: url("../../assets/img/start-screen-gradient-background-x768.png")
+      no-repeat;
+    background-size: cover;
   }
   .not-only-wrapper {
     flex-direction: column;
@@ -109,6 +112,11 @@
 }
 
 @media (max-width: 420px) {
+  .not-only {
+    background: url("../../assets/img/start-screen-gradient-background-x420.png")
+      no-repeat;
+    background-size: cover;
+  }
   .not-only-title {
     font-family: "Georgia";
     font-style: normal;
