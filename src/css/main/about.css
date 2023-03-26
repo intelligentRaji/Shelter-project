@@ -23,11 +23,64 @@
   max-width: 370px;
   color: var(--color-dark-i);
 }
-.paragraph {
+.about-text-paragraph {
   font-family: "Arial";
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
   line-height: 160%;
   color: var(--color-dark-xl);
+}
+
+@media (max-width: 1220px) {
+  .about-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-text {
+    margin-bottom: 80px;
+    gap: 25px;
+    max-width: 550px;
+  }
+  .about-image {
+    order: 2;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-wrapper {
+    margin: 80px 0 100px;
+  }
+  .about-text {
+    max-width: 430px;
+  }
+}
+
+@media (max-width: 690px) {
+  .about-image {
+    max-width: 260px;
+  }
+  .about-text {
+    margin-bottom: 42px;
+  }
+}
+
+@media (max-width: 420px) {
+  .about-text-title {
+    text-align: center;
+  }
+  .about {
+    padding: 42px 0;
+  }
+  .about-wrapper {
+    margin: 0;
+  }
+  .about-text {
+    padding: 0 5px;
+    gap: 23px;
+  }
+  .about-text-paragraph {
+    text-align: justify;
+  }
 }

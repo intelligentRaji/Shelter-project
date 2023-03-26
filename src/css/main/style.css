@@ -40,3 +40,27 @@ h2 {
   line-height: 130%;
   letter-spacing: 0.06em;
 }
+
+@media (max-width: 1030px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 420px) {
+  .container {
+    padding: 0 20px;
+  }
+  .not-only-container {
+    padding: 0 10px;
+  }
+  .h2 {
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 130%;
+  }
+  /* .footer-container {
+    padding: 0 10px;
+  } */
+}
