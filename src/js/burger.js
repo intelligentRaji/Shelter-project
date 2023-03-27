@@ -30,9 +30,11 @@ export default function burgerMenu() {
   links.forEach((item) => item.addEventListener("click", showBurger));
 
   document.addEventListener("click", (e) => {
-    const target =
-      e.composedPath().includes(burgerNavigation) ||
-      e.composedPath().includes(burger);
-    if (!target) showBurger();
+    if (burger.classList.contains("active")) {
+      const target =
+        e.composedPath().includes(burgerNavigation) ||
+        e.composedPath().includes(burger);
+      if (!target) showBurger();
+    }
   });
 }

@@ -2,6 +2,7 @@
 @import url("./pets-header.css");
 @import url("./our-friends.css");
 @import url("../main/footer.css");
+@import url("../popup.css");
 
 html {
   scroll-behavior: smooth;
