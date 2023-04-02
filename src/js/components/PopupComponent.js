@@ -1,3 +1,4 @@
+import getScrollbarWidth from "../utils/getScrollbarWidth.js";
 import BaseComponent from "./BaseComponent.js";
 import ButtonComponent from "./ButtonComponent.js";
 import ImageComponent from "./ImageComponent.js";
@@ -72,10 +73,11 @@ export default class PopupComponent extends BaseComponent {
   }
 
   closePopup() {
-    this.overlay.style.visibility = "hidden";
-    this.overlay.style.backgroundColor = "transparent";
-    this.element.style.opacity = "0";
+    const scrollbarWidth = getScrollbarWidth();
+    this.overlay.classList.remove("active");
     document.body.style.overflow = "visible";
+    document.body.style.paddingRight = "0";
+    this.element.style.paddingLeft = `${scrollbarWidth}px`;
     this.element.addEventListener("transitionend", () => {
       this.element.remove();
     });

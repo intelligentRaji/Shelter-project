@@ -3,6 +3,7 @@ import ImageComponent from "./ImageComponent.js";
 import TextComponent from "./TextComponent.js";
 import ButtonComponent from "./ButtonComponent.js";
 import PopupComponent from "./PopupComponent.js";
+import getScrollbarWidth from "../utils/getScrollbarWidth.js";
 
 export default class CardComponent extends BaseComponent {
   constructor(options) {
@@ -24,12 +25,12 @@ export default class CardComponent extends BaseComponent {
       text: "Learn more",
     });
     this.overlay = document.querySelector(".overlay");
-    this.button.element.addEventListener("click", async () => {
+    this.element.addEventListener("click", async () => {
       await this.createPopup(options.settings);
-      this.overlay.style.visibility = "visible";
-      this.overlay.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-      this.popup.element.style.opacity = "1";
+      const scrollWidth = getScrollbarWidth();
+      this.overlay.classList.add("active");
       document.body.style.overflow = "hidden";
+      document.body.style.paddingRight = `${scrollWidth}px`;
     });
   }
 

@@ -38,6 +38,27 @@ h2 {
   letter-spacing: 0.06em;
 }
 
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  transition: all 0.3s ease 0s;
+  visibility: hidden;
+}
+
+.overlay.active {
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: visible;
+  opacity: 1;
+}
+
+.overlay.active ~ .popup {
+  opacity: 1;
+}
+
 @media (max-width: 1030px) {
   .container {
     padding: 0 30px;

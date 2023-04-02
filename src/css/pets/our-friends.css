@@ -116,7 +116,7 @@
   display: flex;
   width: 100%;
   overflow: hidden;
-  gap: 40px;
+  gap: 3%;
 }
 
 .our-friends-slide {
@@ -125,6 +125,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   row-gap: 30px;
+  transition: all 0.5s ease 0s;
 }
 
 .our-friends-card {
@@ -135,6 +136,7 @@
   align-items: center;
   border-radius: 9px;
   transition: all 0.3s ease 0s;
+  cursor: pointer;
 }
 
 .our-friends-card:hover {
