@@ -5,6 +5,7 @@ import shuffleArray from "../utils/shuffle.js";
 export default class PetsSlider extends ViewportComponent {
   constructor(options) {
     super(options);
+    this.getCardsPerSlide();
     this.getFiles(options.files);
     this.getSlides();
   }
@@ -19,10 +20,9 @@ export default class PetsSlider extends ViewportComponent {
   }
 
   getSlides() {
-    const cardsPerSlide = 8;
     const res = [];
-    for (let i = 0; i < this.files.length; i += cardsPerSlide) {
-      const cardsInSlide = this.files.slice(i, i + cardsPerSlide);
+    for (let i = 0; i < this.files.length; i += this.cardsPerSlide) {
+      const cardsInSlide = this.files.slice(i, i + this.cardsPerSlide);
       res.push(
         new PetsSlide({
           tag: "div",
@@ -33,5 +33,17 @@ export default class PetsSlider extends ViewportComponent {
       );
     }
     this.slides = res;
+  }
+
+  getCardsPerSlide() {
+    if (window.innerWidth > 1200) {
+      this.cardsPerSlide = 8;
+    }
+    if (window.innerWidth <= 1200 && window.innerWidth > 630) {
+      this.cardsPerSlide = 6;
+    }
+    if (window.innerWidth <= 630) {
+      this.cardsPerSlide = 3;
+    }
   }
 }

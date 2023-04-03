@@ -54,6 +54,9 @@
 @media (max-width: 980px) {
   .footer {
     padding-top: 30px;
+    background: url("../../assets/img/footer-gradient-background-x768.png")
+      no-repeat;
+    background-size: cover;
   }
   .footer-container {
     grid-template-columns: repeat(2, 50%);
@@ -72,6 +75,11 @@
 }
 
 @media (max-width: 710px) {
+  .footer {
+    background: url("../../assets/img/footer-gradient-background-x420.png")
+      no-repeat;
+    background-size: cover;
+  }
   .footer-container {
     grid-template-columns: 100%;
   }
