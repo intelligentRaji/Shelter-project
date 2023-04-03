@@ -64,3 +64,76 @@
 .not-only-image {
   margin-top: 180px;
 }
+
+@media (max-width: 1160px) {
+  .not-only-image {
+    width: 569px;
+  }
+}
+
+@media (max-width: 1030px) {
+  .not-only {
+    padding-top: 150px;
+    background: url("../../assets/img/start-screen-gradient-background-x768.png")
+      no-repeat;
+    background-size: cover;
+  }
+  .not-only-wrapper {
+    flex-direction: column;
+  }
+  .not-only-description {
+    margin-top: 0;
+    max-width: 550px;
+    margin-bottom: 100px;
+  }
+  .not-only-image {
+    margin-top: 0;
+    align-self: flex-end;
+  }
+  .not-only-button {
+    align-self: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .not-only-description {
+    max-width: 460px;
+  }
+}
+
+@media (max-width: 690px) {
+  .not-only-image {
+    max-width: 260px;
+    align-self: center;
+  }
+  .not-only-description {
+    margin-bottom: 105px;
+  }
+}
+
+@media (max-width: 420px) {
+  .not-only {
+    background: url("../../assets/img/start-screen-gradient-background-x420.png")
+      no-repeat;
+    background-size: cover;
+  }
+  .not-only-title {
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 130%;
+    text-align: center;
+    max-width: 250px;
+    letter-spacing: 0.06em;
+  }
+  .not-only-description {
+    align-items: center;
+  }
+  .not-only-text {
+    text-align: center;
+  }
+  .not-only-image {
+    align-self: flex-end;
+  }
+}

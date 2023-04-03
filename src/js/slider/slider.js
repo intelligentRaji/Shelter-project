@@ -60,5 +60,30 @@ export default class Slider extends SectionComponent {
       parent: this.button.element,
       text: "Get to know the rest",
     });
+    window.addEventListener("resize", () => {
+      if (
+        window.innerWidth < 1080 &&
+        window.innerWidth > 756 &&
+        this.viewport.cardsInSlide !== 2
+      ) {
+        this.genereteSlider();
+      }
+      if (window.innerWidth > 1080 && this.viewport.cardsInSlide !== 3) {
+        this.genereteSlider();
+      }
+      if (window.innerWidth < 756 && this.viewport.cardsInSlide !== 1) {
+        this.genereteSlider();
+      }
+    });
+  }
+
+  genereteSlider() {
+    this.viewport.element.remove();
+    this.viewport = new MainSlider({
+      tag: "div",
+      className: "our-friends-viewport",
+      neighbor: this.left.element,
+      files: this.files,
+    });
   }
 }

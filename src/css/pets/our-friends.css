@@ -101,13 +101,13 @@
 
 .our-friends-page {
   background-color: var(--color-primary);
-  width: 52px;
-  height: 52px;
+  width: 50px;
+  height: 50px;
   border: 2px solid var(--color-primary);
   border-radius: 50%;
   position: relative;
   text-align: center;
-  line-height: 52px;
+  line-height: 50px;
   vertical-align: middle;
   user-select: none;
 }
@@ -120,7 +120,8 @@
 }
 
 .our-friends-slide {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
   flex: 1 0 100%;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -172,4 +173,53 @@
 
 .our-friends-card:hover .our-friends-card-button {
   background-color: var(--color-primary);
+}
+
+@media (max-width: 1200px) {
+  .our-friends-slide {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media (max-width: 940px) {
+  .our-friends {
+    padding-bottom: 75px;
+  }
+  .our-friends-container {
+    gap: 30px;
+  }
+  .our-friends-viewport {
+    max-width: 580px;
+  }
+  .our-friends-slide {
+    grid-template-columns: repeat(2, auto);
+    row-gap: 32px;
+  }
+  .our-friends-buttons {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 630px) {
+  .our-friends {
+    padding: 42px 0;
+  }
+  .our-friends-container {
+    gap: 42px;
+  }
+  .our-friends-title {
+    margin: 0 -5px;
+  }
+  .our-friends-viewport {
+    width: 270px;
+    max-width: none;
+  }
+  .our-friends-slide {
+    grid-template-columns: auto;
+    justify-self: center;
+  }
+  .our-friends-buttons {
+    gap: 10px;
+    margin-top: 0;
+  }
 }
