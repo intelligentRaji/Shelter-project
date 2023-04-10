@@ -1,0 +1,113 @@
+:root {
+  --color-light-l: #f6f6f6;
+  --color-dark-l: #545454;
+  --color-primary: #f1cdb3;
+  --color-dark-m: #b2b2b2;
+  --color-primary-light: #fddcc4;
+}
+
+.addition {
+  padding-top: 80px;
+  padding-bottom: 99px;
+  background-color: var(--color-light-l);
+}
+.addition-wrapper {
+  max-width: 915px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.addition-info {
+  max-width: 380px;
+  display: inline-flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 20px;
+}
+.addition-info-title {
+  color: var(--color-dark-l);
+  max-width: 300px;
+}
+.addition-info-bank {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: var(--color-dark-l);
+}
+.addition-info-card {
+  display: block;
+  background-color: var(--color-primary);
+  padding: 10px 15px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+}
+.addition-info-card:hover {
+  background-color: var(--color-primary-light);
+}
+.addition-info-card-number {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: var(--color-dark-l);
+}
+.addition-info-agreement {
+  font-family: "Arial";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--color-dark-m);
+}
+
+@media (max-width: 980px) {
+  .addition-wrapper {
+    flex-direction: column;
+    gap: 60px;
+  }
+  .addition-img {
+    order: 2;
+  }
+}
+
+@media (max-width: 560px) {
+  .addition {
+    padding: 42px 0;
+  }
+  .addition-img {
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 420px) {
+  .addition-wrapper {
+    gap: 42px;
+  }
+  .addition-info {
+    align-items: center;
+    gap: 23px;
+  }
+  .addition-info-title {
+    max-width: 228px;
+    text-align: center;
+  }
+  .addition-info-bank {
+    letter-spacing: 0;
+  }
+  .addition-info-card-number {
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.055em;
+  }
+}

@@ -1,0 +1,115 @@
+:root {
+  --color-light-xl: #ffffff;
+  --color-primary: #f1cdb3;
+}
+
+.footer {
+  background: url("../../assets/img/footer-gradient-background.png");
+  background-size: cover;
+  padding-top: 40px;
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items: start;
+  justify-content: space-between;
+}
+.footer-block {
+  min-height: 234px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+.footer-questions {
+  max-width: 280px;
+}
+.footer-title {
+  color: var(--color-light-xl);
+}
+.row {
+  display: flex;
+  gap: 19px;
+  align-items: center;
+}
+.footer-question-mail-img {
+  width: 40px;
+  height: 32px;
+}
+.footer-text {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  color: var(--color-primary);
+}
+.footer-text:hover {
+  text-decoration: underline;
+}
+.footer-visit {
+  max-width: 302px;
+}
+
+@media (max-width: 980px) {
+  .footer {
+    padding-top: 30px;
+    background: url("../../assets/img/footer-gradient-background-x768.png")
+      no-repeat;
+    background-size: cover;
+  }
+  .footer-container {
+    grid-template-columns: repeat(2, 50%);
+    justify-items: center;
+    row-gap: 65px;
+  }
+  .footer-img {
+    grid-column: 1 / span 2;
+  }
+  .footer-block {
+    margin-top: 0;
+  }
+  .footer-visit {
+    max-width: 318px;
+  }
+}
+
+@media (max-width: 710px) {
+  .footer {
+    background: url("../../assets/img/footer-gradient-background-x420.png")
+      no-repeat;
+    background-size: cover;
+  }
+  .footer-container {
+    grid-template-columns: 100%;
+  }
+  .footer-img {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .footer-container {
+    row-gap: 15px;
+  }
+  .footer-block {
+    align-items: center;
+  }
+  .footer-title {
+    text-align: center;
+  }
+  .footer-block {
+    justify-content: start;
+    gap: 40px;
+  }
+  .footer-visit .footer-title {
+    max-width: 280px;
+  }
+  .footer-visit-adress {
+    width: 300px;
+  }
+  .footer-img {
+    max-width: 260px;
+    margin-top: 12px;
+  }
+}

@@ -1,0 +1,74 @@
+@import url("../normalize.css");
+@import url("./header.css");
+@import url("./not-only.css");
+@import url("./about.css");
+@import url("./slider.css");
+@import url("./help.css");
+@import url("./addition.css");
+@import url("./footer.css");
+@import url("../popup.css");
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1280px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+.h2 {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+
+.overlay.active {
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: visible;
+  opacity: 1;
+}
+
+.overlay.active ~ .popup {
+  opacity: 1;
+}
+
+@media (max-width: 1030px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 420px) {
+  .container {
+    padding: 0 20px;
+  }
+  .not-only-container {
+    padding: 0 10px;
+  }
+  .h2 {
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 130%;
+  }
+}

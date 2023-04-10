@@ -1,0 +1,139 @@
+:root {
+  --color-light-xl: #ffffff;
+  --color-dark-s: #cdcdcd;
+  --color-primary: #f1cdb3;
+  --color-dark-3xl: #292929;
+  --color-primary-light: #fddcc4;
+}
+
+.not-only {
+  background: url("../../assets/img/start-screen-gradient-background.png");
+  background-size: cover;
+}
+.not-only-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.not-only-description {
+  max-width: 460px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+}
+.not-only-title {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 130%;
+  color: var(--color-light-xl);
+  width: 310px;
+}
+.not-only-text {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: var(--color-dark-s);
+}
+.not-only-button {
+  width: 207px;
+  height: 52px;
+  background-color: var(--color-primary);
+  border-radius: 100px;
+  border: none;
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 50px;
+  letter-spacing: 0.06em;
+  color: var(--color-dark-3xl);
+  cursor: pointer;
+  transition: all 0.2s ease 0s;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.not-only-button:hover {
+  background-color: var(--color-primary-light);
+}
+.not-only-image {
+  margin-top: 180px;
+}
+
+@media (max-width: 1160px) {
+  .not-only-image {
+    width: 569px;
+  }
+}
+
+@media (max-width: 1030px) {
+  .not-only {
+    padding-top: 150px;
+    background: url("../../assets/img/start-screen-gradient-background-x768.png")
+      no-repeat;
+    background-size: cover;
+  }
+  .not-only-wrapper {
+    flex-direction: column;
+  }
+  .not-only-description {
+    margin-top: 0;
+    max-width: 550px;
+    margin-bottom: 100px;
+  }
+  .not-only-image {
+    margin-top: 0;
+    align-self: flex-end;
+  }
+  .not-only-button {
+    align-self: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .not-only-description {
+    max-width: 460px;
+  }
+}
+
+@media (max-width: 690px) {
+  .not-only-image {
+    max-width: 260px;
+    align-self: center;
+  }
+  .not-only-description {
+    margin-bottom: 105px;
+  }
+}
+
+@media (max-width: 420px) {
+  .not-only {
+    background: url("../../assets/img/start-screen-gradient-background-x420.png")
+      no-repeat;
+    background-size: cover;
+  }
+  .not-only-title {
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 130%;
+    text-align: center;
+    max-width: 250px;
+    letter-spacing: 0.06em;
+  }
+  .not-only-description {
+    align-items: center;
+  }
+  .not-only-text {
+    text-align: center;
+  }
+  .not-only-image {
+    align-self: flex-end;
+  }
+}
