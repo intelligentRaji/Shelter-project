@@ -62,5 +62,30 @@ export default class Pagination extends SectionComponent {
       parent: this.container.element,
       parentClass: this,
     });
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 1200 && this.viewport.cardsPerSlide !== 8) {
+        this.genereteSlider(options.files);
+      }
+      if (
+        window.innerWidth <= 1200 &&
+        window.innerWidth > 630 &&
+        this.viewport.cardsPerSlide !== 6
+      ) {
+        this.genereteSlider(options.files);
+      }
+      if (window.innerWidth <= 630 && this.viewport.cardsPerSlide !== 3) {
+        this.genereteSlider(options.files);
+      }
+    });
+  }
+
+  genereteSlider(settings) {
+    this.viewport.element.remove();
+    this.viewport = new PetsSlider({
+      tag: "div",
+      className: "our-friends-viewport",
+      neighbor: this.title.element,
+      files: settings,
+    });
   }
 }
