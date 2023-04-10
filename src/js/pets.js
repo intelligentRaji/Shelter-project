@@ -1,5 +1,6 @@
 import "../css/pets/style.css";
 import Pagination from "./pets/pagination.js";
+import burgerMenu from "./burger.js";
 
 async function startApp() {
   const res = await fetch("./json/pets.json");
@@ -12,4 +13,5 @@ async function startApp() {
   });
 }
 
+burgerMenu();
 startApp();

@@ -1,5 +1,6 @@
 import "../css/main/style.css";
 import Slider from "./slider/slider.js";
+import burgerMenu from "./burger.js";
 
 async function startApp() {
   const res = await fetch("./json/pets.json");
@@ -12,6 +13,7 @@ async function startApp() {
   });
 }
 
+burgerMenu();
 await startApp();
 
 console.log(`Вёрстка страницы Main соответствует макету при ширине экрана 1280px: 

@@ -1,8 +1,9 @@
 export default class BaseComponent {
-  constructor({ tag, className, parent, neighbor }) {
+  constructor({ tag, className, parent, neighbor, prepend }) {
     this.element = document.createElement(tag);
     this.element.className = className;
-    if (parent) parent.append(this.element);
+    if (prepend) parent.prepend(this.element);
+    if (parent && !prepend) parent.append(this.element);
     if (neighbor) {
       this.neighbor = neighbor;
       this.neighbor.after(this.element);

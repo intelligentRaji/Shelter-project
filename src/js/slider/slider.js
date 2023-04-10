@@ -37,6 +37,7 @@ export default class Slider extends SectionComponent {
       src: arrow,
       alt: "left",
     });
+    this.left.element.onclick = this.showPreviouseSlide.bind(this);
     this.viewport = new MainSlider({
       tag: "div",
       className: "our-friends-viewport",
@@ -49,6 +50,7 @@ export default class Slider extends SectionComponent {
       src: arrow,
       alt: "right",
     });
+    this.right.element.onclick = this.showNextSlide.bind(this);
     this.button = new LinkComponent({
       className: "our-friends-button",
       parent: this.ourFriendsWrapper.element,
@@ -74,6 +76,40 @@ export default class Slider extends SectionComponent {
       if (window.innerWidth < 756 && this.viewport.cardsInSlide !== 1) {
         this.genereteSlider();
       }
+    });
+  }
+
+  showNextSlide() {
+    const button = this.right.element;
+    this.viewport.getNextSlide();
+    const slide = this.viewport.slides[0].element;
+    const movementDistance = -103;
+    const currentMargin = parseInt(slide.style.marginLeft, 10);
+    if (Number.isNaN(currentMargin)) {
+      slide.style.marginLeft = `${movementDistance}%`;
+    } else {
+      slide.style.marginLeft = `${currentMargin + movementDistance}%`;
+    }
+    button.onclick = null;
+    slide.addEventListener("transitionend", () => {
+      button.onclick = this.showNextSlide.bind(this);
+    });
+  }
+
+  showPreviouseSlide() {
+    const button = this.left.element;
+    const slide = this.viewport.slides[0].element;
+    const movementDistance = 103;
+    const currentMargin = parseInt(slide.style.marginLeft, 10);
+    if (Number.isNaN(currentMargin)) {
+      slide.style.marginLeft = `${movementDistance}%`;
+    } else {
+      slide.style.marginLeft = `${currentMargin + movementDistance}%`;
+    }
+    button.onclick = null;
+    this.viewport.getPreviouseSlide();
+    slide.addEventListener("transitionend", () => {
+      button.onclick = this.showPreviouseSlide.bind(this);
     });
   }
 

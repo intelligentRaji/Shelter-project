@@ -6,6 +6,7 @@
 @import url("./help.css");
 @import url("./addition.css");
 @import url("./footer.css");
+@import url("../popup.css");
 
 html {
   scroll-behavior: smooth;
@@ -39,6 +40,16 @@ h2 {
   font-size: 35px;
   line-height: 130%;
   letter-spacing: 0.06em;
+}
+
+.overlay.active {
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: visible;
+  opacity: 1;
+}
+
+.overlay.active ~ .popup {
+  opacity: 1;
 }
 
 @media (max-width: 1030px) {
